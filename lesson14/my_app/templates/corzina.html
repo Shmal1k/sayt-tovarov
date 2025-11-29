@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'my_app/css/catalog.css' %}">
+</head>
+<body>
+             <div class="products-grid">
+                    <div class="product-image">
+                        <img width="300" src="{% static 'my_app/images/' %}{{ tovar.img }}" alt="Название товара">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">{{ tovar.title }}</h3>
+
+                        <p class="product-description">
+                            Наличие: {{ tovar.opisanie }}</p>
+                        <div class="product-footer">
+                            <p><span class="product-price">
+                                <p>Количество доступное для покупки: 1</p>
+                               <p> Итоговая цена: {{ tovar.price }}р</p>
+                            </span></p>
+
+
+                            <p><button class="add-to-cart">Купить</button></p>
+                        </div>
+                    </div>
+
+</div></div>
+</body>
+</html>
